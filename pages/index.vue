@@ -2,6 +2,7 @@
   <div>
     <background />
     <about />
+    <languages />
   </div>
   <!-- <v-row justify="center" align="center">
     <v-col cols="12" sm="8" md="6">
@@ -85,13 +86,15 @@
 // import VuetifyLogo from '~/components/VuetifyLogo.vue'
 import background from '~/components/Background.vue'
 import about from '~/components/About.vue'
+import languages from '~/components/Languages.vue'
 
 export default {
   components: {
     // Logo,
     // VuetifyLogo,
     background,
-    about
+    about,
+    languages
   }
 }
 </script>

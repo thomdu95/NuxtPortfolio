@@ -1,6 +1,6 @@
 <template>
   <div class="aboutContainer">
-    <h3 class="textImportant">
+    <h3 id="presentation" class="textImportant">
       Présentation
     </h3>
     <hr width="150px">
@@ -11,13 +11,22 @@
       Amoureux de voyages et désieux de découvrir le maximum de cultures de mon vivant je suis aussi curieux que Pandore !
     </p>
     <img class="aboutPic" src="/thomasjamais.jpg">
-    <v-btn
-      elevation="2"
-      large
-      outlined
-    >
-      <a href="https://www.linkedin.com/in/thomas-jamais-0968369a" target="_blank">Linkedin</a>
-    </v-btn>
+    <div>
+      <v-btn
+        elevation="2"
+        large
+        outlined
+      >
+        <a href="https://www.linkedin.com/in/thomas-jamais-0968369a" target="_blank">Linkedin</a>
+      </v-btn>
+      <v-btn
+        elevation="2"
+        large
+        outlined
+      >
+        <a href="https://hamacattitude.fr/" target="_blank">HamacAttitude</a>
+      </v-btn>
+    </div>
   </div>
 </template>
 

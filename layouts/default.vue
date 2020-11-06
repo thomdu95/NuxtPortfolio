@@ -1,5 +1,10 @@
 <template>
   <v-app light>
+    <v-app-bar dense>
+      <v-btn href="#presentation">
+        Présentation
+      </v-btn>
+    </v-app-bar>
     <v-main>
       <nuxt />
     </v-main>
