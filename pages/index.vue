@@ -1,5 +1,8 @@
 <template>
-  <background />
+  <div>
+    <background />
+    <about />
+  </div>
   <!-- <v-row justify="center" align="center">
     <v-col cols="12" sm="8" md="6">
       <div class="text-center">
@@ -81,12 +84,14 @@
 // import Logo from '~/components/Logo.vue'
 // import VuetifyLogo from '~/components/VuetifyLogo.vue'
 import background from '~/components/Background.vue'
+import about from '~/components/About.vue'
 
 export default {
   components: {
     // Logo,
     // VuetifyLogo,
-    background
+    background,
+    about
   }
 }
 </script>
