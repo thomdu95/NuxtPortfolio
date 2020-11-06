@@ -1,8 +1,11 @@
 <template>
   <v-app light>
     <v-app-bar dense>
-      <v-btn href="#presentation">
+      <v-btn href="#presentation" class="headerBtn">
         Présentation
+      </v-btn>
+      <v-btn href="#technologies" class="headerBtn">
+        Technologies
       </v-btn>
     </v-app-bar>
     <v-main>
@@ -26,3 +29,9 @@ export default {
   }
 }
 </script>
+
+<style>
+.headerBtn {
+  margin-left: 2vw;
+}
+</style>

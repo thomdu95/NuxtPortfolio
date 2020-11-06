@@ -1,5 +1,5 @@
 <template>
-  <div class="aboutContainer">
+  <div class="myContainer">
     <h3 id="presentation" class="textImportant">
       Présentation
     </h3>
@@ -38,7 +38,7 @@ export default {
 
 <style>
 
-.aboutContainer {
+.myContainer {
     display: flex;
     justify-content: center;
     align-items: center;
