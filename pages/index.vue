@@ -3,6 +3,7 @@
     <background />
     <about />
     <languages />
+    <projects />
   </div>
   <!-- <v-row justify="center" align="center">
     <v-col cols="12" sm="8" md="6">
@@ -87,6 +88,7 @@
 import background from '~/components/Background.vue'
 import about from '~/components/About.vue'
 import languages from '~/components/Languages.vue'
+import projects from '~/components/Projects.vue'
 
 export default {
   components: {
@@ -94,7 +96,8 @@ export default {
     // VuetifyLogo,
     background,
     about,
-    languages
+    languages,
+    projects
   }
 }
 </script>
