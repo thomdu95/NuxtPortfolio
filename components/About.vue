@@ -17,7 +17,7 @@
         large
         outlined
       >
-        <a href="https://www.linkedin.com/in/thomas-jamais-0968369a" target="_blank">Linkedin</a>
+        <a href="https://www.linkedin.com/in/thomas-jamais-0968369a" target="_blank" class="textLink">Linkedin</a>
       </v-btn>
       <v-btn
         elevation="2"
@@ -64,6 +64,18 @@ export default {
 
 hr {
     margin-bottom: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+  .aboutPara {
+    width: unset;
+  }
+  .aboutPic {
+    width: 250px;
+  }
+  .textLink {
+    font-size: 0.8rem;
+  }
 }
 
 </style>

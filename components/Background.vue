@@ -19,7 +19,7 @@
   width: 100vw;
   background-image: url('/background-hight.jpg');
   background-position: center;
-  background-size: 100%;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,5 +39,6 @@
     font-weight: 400;
     font-size: 3rem;
     color: #11270B;
+    text-align: center;
 }
 </style>

@@ -1,10 +1,13 @@
 <template>
   <v-app light>
     <v-app-bar dense>
-      <v-btn href="#presentation" class="headerBtn">
+      <v-toolbar-title>Thomas Jamais</v-toolbar-title>
+      <v-spacer />
+      <!-- <v-icon>mdi-dots-vertical</v-icon> -->
+      <v-btn v-if="!isMobile" href="#presentation" class="headerBtn">
         Présentation
       </v-btn>
-      <v-btn href="#technologies" class="headerBtn">
+      <v-btn v-if="!isMobile" href="#technologies" class="headerBtn">
         Technologies
       </v-btn>
     </v-app-bar>
@@ -15,6 +18,9 @@
 </template>
 
 <script>
+
+import isMobile from '~/middleware/isMobile'
+
 export default {
   data () {
     return {
@@ -24,8 +30,12 @@ export default {
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: 'Thomas Jamais'
+      title: 'Thomas Jamais',
+      isMobile: false
     }
+  },
+  mounted () {
+    isMobile(this)
   }
 }
 </script>
