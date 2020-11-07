@@ -44,6 +44,7 @@ export default {
     align-items: center;
     flex-direction: column;
     padding: 30vh 10vw;
+    content-visibility: auto;
 }
 
 .aboutPara {

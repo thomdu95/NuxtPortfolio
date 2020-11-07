@@ -52,6 +52,7 @@ export default {
 .technoContainer {
   width: 60vw !important;
   padding: unset;
+  content-visibility: auto;
 }
 
 .languages {
