@@ -24,7 +24,9 @@ export default {
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
-    { src: '@/plugins/aos', mode: 'client' }
+    { src: '@/plugins/aos', mode: 'client' },
+    '~/plugins/lazysize.client.js',
+    { src: '~/plugins/vuelidate.client' }
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -68,5 +70,11 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
+    extend (config, { isDev, isClient, loaders: { vue } }) {
+      if (isClient) {
+        vue.transformAssetUrls.img = ['data-src', 'src']
+        vue.transformAssetUrls.source = ['data-srcset', 'srcset']
+      }
+    }
   }
 }

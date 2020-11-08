@@ -2,6 +2,8 @@
   <v-card
     class="mx-auto"
     max-width="344"
+    data-aos="flip-left"
+    :data-aos-delay="(nb * 100) + 100"
   >
     <v-img
       :src="language.img"
@@ -57,6 +59,10 @@ export default {
   props: {
     language: {
       type: Object,
+      required: true
+    },
+    nb: {
+      type: Number,
       required: true
     }
   },

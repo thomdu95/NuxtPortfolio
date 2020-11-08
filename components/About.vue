@@ -10,7 +10,7 @@
       En plus de ça je suis aussi formateur en Dévelopement Web et Web mobile, j'adore être au contact de personnes désireuse d'apprendre.
       Amoureux de voyages et désieux de découvrir le maximum de cultures de mon vivant je suis aussi curieux que Pandore !
     </p>
-    <img class="aboutPic" src="/thomasjamais.jpg">
+    <img class="aboutPic lazyload" data-src="/thomasjamais.jpg">
     <div>
       <v-btn
         elevation="2"

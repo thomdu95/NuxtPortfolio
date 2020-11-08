@@ -4,6 +4,7 @@
     <about />
     <languages />
     <projects />
+    <ContactForm />
   </div>
   <!-- <v-row justify="center" align="center">
     <v-col cols="12" sm="8" md="6">
@@ -89,6 +90,7 @@ import background from '~/components/Background.vue'
 import about from '~/components/About.vue'
 import languages from '~/components/Languages.vue'
 import projects from '~/components/Projects.vue'
+import ContactForm from '~/components/ContactForm.vue'
 
 export default {
   components: {
@@ -97,7 +99,14 @@ export default {
     background,
     about,
     languages,
-    projects
+    projects,
+    ContactForm
   }
 }
 </script>
+
+<style>
+hr {
+  border-color: #11270B;
+}
+</style>
