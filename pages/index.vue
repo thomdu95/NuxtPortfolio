@@ -3,6 +3,7 @@
     <background />
     <about />
     <languages />
+    <TimeList />
     <projects />
     <ContactForm />
   </div>
@@ -91,6 +92,7 @@ import about from '~/components/About.vue'
 import languages from '~/components/Languages.vue'
 import projects from '~/components/Projects.vue'
 import ContactForm from '~/components/ContactForm.vue'
+import TimeList from '~/components/TimeList.vue'
 
 export default {
   components: {
@@ -100,7 +102,8 @@ export default {
     about,
     languages,
     projects,
-    ContactForm
+    ContactForm,
+    TimeList
   }
 }
 </script>

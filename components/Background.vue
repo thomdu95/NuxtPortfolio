@@ -7,6 +7,16 @@
       <h3 class="textImportant">
         Thomas Jamais
       </h3>
+      <a href="#presentation">
+        <v-avatar color="#ebe9e8" class="myAvatar">
+          <v-icon dark>
+            mdi-chevron-triple-down
+            <!-- mdi-account-circle -->
+          </v-icon>
+        </v-avatar>
+
+      </a>
+      <!-- <a href="#section04"><span></span>Scroll</a> -->
     </div>
 
     <!-- <img src="/background-hight.jpg" class="bgImg"> -->
@@ -14,6 +24,11 @@
 </template>
 
 <style>
+.myAvatar {
+  border: 1px double white !important;
+  margin-top: 10vh;
+}
+
 .bgImg {
   height: 100vh;
   width: 100vw;
@@ -46,4 +61,79 @@
     color: #11270B;
     text-align: center;
 }
+
+.myLittleCard a {
+  padding-top: 60px;
+}
+.myLittleCard a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 46px;
+  height: 46px;
+  margin-left: -23px;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  box-sizing: border-box;
+}
+.myLittleCard a span::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: '';
+  width: 16px;
+  height: 16px;
+  margin: -12px 0 0 -8px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  box-sizing: border-box;
+}
+.myLittleCard a span::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  content: '';
+  width: 44px;
+  height: 44px;
+  box-shadow: 0 0 0 0 rgba(255,255,255,.1);
+  border-radius: 100%;
+  opacity: 0;
+  -webkit-animation: sdb03 3s 5;
+  animation: sdb03 3s 5;
+  box-sizing: border-box;
+}
+@-webkit-keyframes sdb03 {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    box-shadow: 0 0 0 60px rgba(255,255,255,.1);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes sdb03 {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    box-shadow: 0 0 0 60px rgba(255,255,255,.1);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 </style>
