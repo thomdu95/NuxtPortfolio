@@ -1,5 +1,21 @@
 <template>
   <div class="myContainer contactContainer">
+    <v-alert
+      v-if="success"
+      dense
+      text
+      type="success"
+    >
+      Votre email a bien été transmis à <strong>Thomas Jamais</strong>. Merci de votre message !
+    </v-alert>
+    <v-alert
+      v-if="error"
+      dense
+      outlined
+      type="error"
+    >
+      Votre email n'a pas pu être transmit à <strong>Thomas Jamais</strong>, merci de re essayer plus tard !
+    </v-alert>
     <h3 class="textImportant">
       Prise de contact
     </h3>
@@ -22,24 +38,6 @@
         @blur="$v.email.$touch()"
       />
       <Editor :change-content="changeContent" />
-      <!-- <v-select
-        v-model="select"
-        :items="items"
-        :error-messages="selectErrors"
-        label="Item"
-        required
-        @change="$v.select.$touch()"
-        @blur="$v.select.$touch()"
-      />
-      <v-checkbox
-        v-model="checkbox"
-        :error-messages="checkboxErrors"
-        label="Do you agree?"
-        required
-        @change="$v.checkbox.$touch()"
-        @blur="$v.checkbox.$touch()"
-      /> -->
-
       <v-btn class="mr-4 mt-10" @click="submit">
         Envoyer
       </v-btn>
@@ -62,36 +60,17 @@ export default {
   validations: {
     name: { required, maxLength: maxLength(35) },
     email: { required, email }
-    // select: { required },
-    // checkbox: {
-    //   checked (val) {
-    //     return val
-    //   }
-    // }
   },
 
   data: () => ({
     name: '',
     email: '',
-    message: ''
-    // select: null,
-    // items: ['Item 1', 'Item 2', 'Item 3', 'Item 4'],
-    // checkbox: false
+    message: '',
+    error: false,
+    success: false
   }),
 
   computed: {
-    // checkboxErrors () {
-    //   const errors = []
-    //   if (!this.$v.checkbox.$dirty) { return errors }
-    //   !this.$v.checkbox.checked && errors.push('You must agree to continue!')
-    //   return errors
-    // },
-    // selectErrors () {
-    //   const errors = []
-    //   if (!this.$v.select.$dirty) { return errors }
-    //   !this.$v.select.required && errors.push('Item is required')
-    //   return errors
-    // },
     nameErrors () {
       const errors = []
       if (!this.$v.name.$dirty) { return errors }
@@ -112,11 +91,31 @@ export default {
   methods: {
     submit () {
       this.$v.$touch()
+      if (!this.$v.error) {
+        const toSend = {
+          name: this.name,
+          email: this.email,
+          message: this.message
+        }
+        this.$axios.post('https://emailthomasjamais.herokuapp.com/sendEmail', toSend)
+          .then((response) => {
+            this.error = false
+            this.success = true
+            return response
+          })
+          .catch((error) => {
+            if (error) {
+              this.success = false
+              this.error = true
+            }
+          })
+      }
     },
     clear () {
       this.$v.$reset()
       this.name = ''
       this.email = ''
+      this.message = ''
     //   this.select = null
     //   this.checkbox = false
     },

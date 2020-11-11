@@ -1,5 +1,5 @@
 <template>
-  <div id="technologies" class="languages" data-aos="zoom-in">
+  <div id="technologies" class="languages">
     <v-container class="myContainer technoContainer">
       <h3 class="textImportant">
         Mes Technologies

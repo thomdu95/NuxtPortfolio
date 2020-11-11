@@ -7,25 +7,35 @@
       <h3 class="textImportant">
         Thomas Jamais
       </h3>
-      <a href="#presentation">
-        <v-avatar color="#ebe9e8" class="myAvatar">
-          <v-icon dark>
-            mdi-chevron-triple-down
-            <!-- mdi-account-circle -->
-          </v-icon>
-        </v-avatar>
-
-      </a>
-      <!-- <a href="#section04"><span></span>Scroll</a> -->
+      <v-btn
+        class="myAvatar"
+        fab
+        outlined
+        color="white"
+        @click="todown"
+      >
+        <v-icon>mdi-chevron-triple-down</v-icon>
+      </v-btn>
     </div>
-
-    <!-- <img src="/background-hight.jpg" class="bgImg"> -->
   </div>
 </template>
 
+<script>
+export default {
+  methods: {
+    todown () {
+      this.$vuetify.goTo('#presentation')
+    }
+  }
+}
+</script>
 <style>
+
+.myLink {
+  text-decoration: none;
+}
+
 .myAvatar {
-  border: 1px double white !important;
   margin-top: 10vh;
 }
 

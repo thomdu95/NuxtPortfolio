@@ -1,11 +1,11 @@
 <template>
   <div class="container list-container">
-    <h3 class="textImportant" data-aos="zoom-in">
+    <h3 class="textImportant">
       Expériences
     </h3>
     <hr width="150px" class="myHr">
     <hr width="130px" class="myHr">
-    <div class="main-timeline">
+    <div id="experiences" class="main-timeline">
       <TimeElem v-for="(elem, id) in myLife" :key="elem.name" :elem="elem" :index="id" />
     </div>
   </div>

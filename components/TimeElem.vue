@@ -1,5 +1,6 @@
+// :data-aos="index % 2 == 0 ? 'flip-right' : 'flip-left'"
 <template>
-  <div class="timeline" :data-aos="index % 2 == 0 ? 'fade-right' : 'fade-left'">
+  <div class="timeline">
     <div class="icon" />
     <div class="date-content">
       <div class="date-outer">
