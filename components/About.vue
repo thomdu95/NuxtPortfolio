@@ -7,8 +7,8 @@
     <hr width="130px">
     <p class="aboutPara">
       Dévelopeur Web depuis maintenant 5 années et freelance depuis autant de temps, j'aime prendre en main des projets et leur donner vie !
-      En plus de ça je suis aussi formateur en Dévelopement Web et Web mobile, j'adore être au contact de personnes désireuse d'apprendre.
-      Amoureux de voyages et voulant découvrir le maximum de cultures de mon vivant je suis aussi curieux que Pandore !
+      En plus de ça je suis aussi formateur en Dévelopement Web et Web mobile, j'adore être au contact de personnes désireuses d'apprendre.
+      Amoureux de voyages et voulant découvrir le maximum de cultures, je suis aussi curieux que Pandore, ma curiosité est insatiable !
     </p>
     <img class="aboutPic lazyload" data-src="/thomasjamais.jpg">
     <div>

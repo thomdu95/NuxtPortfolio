@@ -25,18 +25,57 @@ export default {
         {
           name: 'Country',
           img: '/siteReact.jpg',
-          link: 'http://www.country.thomas-jamais.fr/',
+          link: 'https://www.country.thomas-jamais.fr/',
           star: 5,
           shortDes: 'Trier les pays et jouer avec',
-          description: 'Projet fait en ReactJS et ReactBootstrap. C\'est un mini projet qui à pour but de démontrer certaines des mes compétences dans le dévelopement sous React. Il n\'y a pas Redux pour celui là et il est entierement fait avec des Hooks. Il est biensur à l\'état embriyonaire mais il reste décent et permet de justifier quelques compétences.\nIl a été créée en 5heures.'
+          description: 'Projet fait en ReactJS et ReactBootstrap. C\'est un mini projet qui à pour but de démontrer certaines des mes compétences dans le dévelopement sous React. Il n\'y a pas Redux pour celui là et il est entierement fait avec des Hooks. Il est biensur à l\'état embriyonaire mais il reste décent et permet de justifier quelques compétences.\nIl a été créée en 5 heures.',
+          technos: [
+            {
+              name: 'ReactJS',
+              color: '#222222',
+              textColor: '#61DAFB'
+            },
+            {
+              name: 'ReactBootstrap',
+              color: '#222222',
+              textColor: '#61DAFB'
+            },
+            {
+              name: 'Hooks',
+              color: '#31475E',
+              textColor: '#3FB984'
+            }
+          ]
         },
         {
-          name: 'Country2',
-          img: '/siteReact.jpg',
-          link: 'http://www.country.thomas-jamais.fr/',
+          name: 'Cocktail Finder',
+          img: '/siteCocktail.jpg',
+          link: 'https://www.cocktail.thomas-jamais.fr/',
           star: 5,
-          shortDes: 'Trier les pays et jouer avec',
-          description: 'Projet fait en ReactJS et ReactBootstrap. C\'est un mini projet qui à pour but de démontrer certaines des mes compétences dans le dévelopement sous React. Il n\'y a pas Redux pour celui là et il est entierement fait avec des Hooks. Il est biensur à l\'état embriyonaire mais il reste décent et permet de justifier quelques compétences.\nIl a été créée en 5heures.'
+          shortDes: 'Répertorier les différents cocktails',
+          description: 'Projet fait en Vue, Vuex et Vuetify. C\'est un mini projet qui à pour but de démontrer certaines des mes compétences dans le dévelopement sous Vue. En effet, l\'API que j\'utilise pour répertorier les différents cocktails n\'est pas parfaite et j\'ai du faire beaucoup de parsing pour être capable de lister les différents cocktails par leur ingrédients notament. Le projet a été réalisé en 7 heures.',
+          technos: [
+            {
+              name: 'VueJS',
+              color: '#31475E',
+              textColor: '#3FB984'
+            },
+            {
+              name: 'Vuex',
+              color: '#31475E',
+              textColor: '#3FB984'
+            },
+            {
+              name: 'Vuetify',
+              color: '#1167C1',
+              textColor: '#AFDEFF'
+            },
+            {
+              name: 'ES7',
+              color: '#F7DF1D',
+              textColor: '#000100'
+            }
+          ]
         },
         {
           name: 'Country3',
@@ -44,7 +83,8 @@ export default {
           link: 'http://www.country.thomas-jamais.fr/',
           star: 5,
           shortDes: 'Trier les pays et jouer avec',
-          description: 'Projet fait en ReactJS et ReactBootstrap. C\'est un mini projet qui à pour but de démontrer certaines des mes compétences dans le dévelopement sous React. Il n\'y a pas Redux pour celui là et il est entierement fait avec des Hooks. Il est biensur à l\'état embriyonaire mais il reste décent et permet de justifier quelques compétences.\nIl a été créée en 5heures.'
+          description: 'Projet fait en ReactJS et ReactBootstrap. C\'est un mini projet qui à pour but de démontrer certaines des mes compétences dans le dévelopement sous React. Il n\'y a pas Redux pour celui là et il est entierement fait avec des Hooks. Il est biensur à l\'état embriyonaire mais il reste décent et permet de justifier quelques compétences.\nIl a été créée en 5heures.',
+          technos: []
         }
       ]
     }
