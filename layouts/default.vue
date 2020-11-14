@@ -1,21 +1,16 @@
 <template>
   <v-app v-scroll="onScroll" light>
-    <v-app-bar dense>
-      <v-toolbar-title>Thomas Jamais</v-toolbar-title>
+    <v-app-bar v-if="!fab" flat class="myBar">
+      <v-toolbar-title class="myTitle cyan--text text--lighten-5">
+        Thomas Jamais
+      </v-toolbar-title>
       <v-spacer />
       <!-- <v-icon>mdi-dots-vertical</v-icon> -->
-      <v-btn v-if="!isMobile" class="headerBtn" @click="navTo('#presentation')">
-        Présentation
-      </v-btn>
-      <v-btn v-if="!isMobile" class="headerBtn" @click="navTo('#technologies')">
-        Technologies
-      </v-btn>
-      <v-btn v-if="!isMobile" class="headerBtn" @click="navTo('#experiences')">
-        Experiences
-      </v-btn>
-      <v-btn v-if="!isMobile" class="headerBtn" @click="navTo('#projects')">
-        Projects
-      </v-btn>
+      <span v-if="!isMobile" class="headerBtn" @click="navTo('#presentation')">Présentation</span>
+      <span v-if="!isMobile" class="headerBtn" @click="navTo('#technologies')">Technologies</span>
+      <span v-if="!isMobile" class="headerBtn" @click="navTo('#experiences')">Experiences</span>
+      <span v-if="!isMobile" class="headerBtn" @click="navTo('#projects')">Projects</span>
+      <span v-if="!isMobile" class="headerBtn" @click="navTo('#contact')">Contact</span>
     </v-app-bar>
     <v-main>
       <nuxt />
@@ -77,9 +72,42 @@ export default {
 <style>
 .headerBtn {
   margin-left: 2vw;
+  cursor: pointer;
+  padding: 2px 5px;
+  border-radius: 15%;
+  color: #e0f7fa;
+}
+
+@keyframes btnHover {
+  from {
+    background-color: transparent;
+    color: #e0f7fa;
+  }
+  to {
+    background-color: #e0f7fa;
+    color: black !important;
+  }
+}
+
+.headerBtn:hover {
+  animation: btnHover 200ms forwards;
 }
 
 html {
   scroll-behavior: smooth;
 }
+
+.myBar {
+  top: 0px !important;
+  position: fixed !important;
+  background-color: transparent !important;
+  z-index: 2 !important;
+  border-bottom: 1px solid #E0F7FA !important;
+  padding: 0 20vw;
+}
+
+.myTitle {
+  color: #E0F7FA;
+}
+
 </style>

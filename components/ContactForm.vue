@@ -137,4 +137,10 @@ export default {
     background-attachment: fixed;
     background-repeat: initial;
 }
+
+@media only screen and (max-width: 600px) {
+  .contactContainer {
+    padding: 20vh 0;
+  }
+}
 </style>
