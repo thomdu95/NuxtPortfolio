@@ -1,6 +1,6 @@
 <template>
   <div class="bgImg">
-    <div class="newCard">
+    <div class="newCard" data-aos="flip-left" data-aos-delay="1200">
       <h3 class="textImportant cyan--text text--lighten-5">
         Dévelopeur Web Freelance.
       </h3>
@@ -12,6 +12,8 @@
         fab
         outlined
         color="white"
+        data-aos="zoom-in"
+        data-aos-delay="1800"
         @click="todown"
       >
         <v-icon>mdi-chevron-triple-down</v-icon>

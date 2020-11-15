@@ -1,5 +1,5 @@
 <template>
-  <div class="myContainer contactContainer">
+  <div id="contact" class="myContainer contactContainer">
     <v-alert
       v-if="success"
       dense

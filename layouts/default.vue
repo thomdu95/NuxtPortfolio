@@ -1,16 +1,32 @@
 <template>
   <v-app v-scroll="onScroll" light>
     <v-app-bar v-if="!fab" flat class="myBar">
-      <v-toolbar-title class="myTitle cyan--text text--lighten-5">
+      <v-toolbar-title class="myTitle cyan--text text--lighten-5" data-aos="zoom-in">
         Thomas Jamais
       </v-toolbar-title>
       <v-spacer />
       <!-- <v-icon>mdi-dots-vertical</v-icon> -->
-      <span v-if="!isMobile" class="headerBtn" @click="navTo('#presentation')">Présentation</span>
-      <span v-if="!isMobile" class="headerBtn" @click="navTo('#technologies')">Technologies</span>
-      <span v-if="!isMobile" class="headerBtn" @click="navTo('#experiences')">Experiences</span>
-      <span v-if="!isMobile" class="headerBtn" @click="navTo('#projects')">Projects</span>
-      <span v-if="!isMobile" class="headerBtn" @click="navTo('#contact')">Contact</span>
+      <span v-if="!isMobile" class="headerBtn" data-aos="fade-left" @click="navTo('#presentation')">Présentation</span>
+      <span
+        v-if="!isMobile"
+        class="headerBtn"
+        data-aos="fade-left"
+        data-aos-delay="600"
+        @click="navTo('#technologies')"
+      >
+        Technologies
+      </span>
+      <span
+        v-if="!isMobile"
+        class="headerBtn"
+        data-aos="fade-left"
+        data-aos-delay="1200"
+        @click="navTo('#experiences')"
+      >
+        Experiences
+      </span>
+      <span v-if="!isMobile" class="headerBtn" data-aos="fade-left" data-aos-delay="1800" @click="navTo('#projects')">Projects</span>
+      <span v-if="!isMobile" class="headerBtn" data-aos="fade-left" data-aos-delay="2400" @click="navTo('#contact')">Contact</span>
     </v-app-bar>
     <v-main>
       <nuxt />
@@ -108,6 +124,7 @@ html {
 
 .myTitle {
   color: #E0F7FA;
+  font-size: 2rem !important;
 }
 
 </style>
