@@ -241,7 +241,9 @@ export default {
     background-color: #f7f7f7;
     margin-top:20px;
 } */
-
+.list-container {
+  background-color: #F7F9FC;
+}
 .myHr {
     margin-left: auto;
     margin-right: auto;

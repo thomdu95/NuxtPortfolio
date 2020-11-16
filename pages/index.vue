@@ -5,6 +5,7 @@
     <languages />
     <TimeList />
     <projects />
+    <passions />
     <ContactForm />
     <Footer />
   </div>
@@ -95,6 +96,7 @@ import projects from '~/components/Projects.vue'
 import ContactForm from '~/components/ContactForm.vue'
 import TimeList from '~/components/TimeList.vue'
 import Footer from '~/components/Footer.vue'
+import Passions from '~/components/Passions.vue'
 
 export default {
   components: {
@@ -106,7 +108,8 @@ export default {
     projects,
     ContactForm,
     TimeList,
-    Footer
+    Footer,
+    Passions
   }
 }
 </script>

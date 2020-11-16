@@ -1,5 +1,5 @@
 <template>
-  <div class="myContainer">
+  <div class="myContainer about">
     <h3 id="presentation" class="textImportant">
       Présentation
     </h3>
@@ -37,6 +37,10 @@ export default {
 </script>
 
 <style>
+
+.about {
+  background-color: #F7F9FC;
+}
 
 .myContainer {
     display: flex;
