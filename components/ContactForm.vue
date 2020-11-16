@@ -16,7 +16,7 @@
     >
       Votre email n'a pas pu être transmit à <strong>Thomas Jamais</strong>, merci de re essayer plus tard !
     </v-alert>
-    <h3 class="textImportant">
+    <h3 class="textImportant cyan--text text--lighten-5">
       Prise de contact
     </h3>
     <form class="contactForm">
@@ -25,6 +25,7 @@
         :error-messages="nameErrors"
         :counter="35"
         label="Votre Nom"
+        color="#e0f7fa"
         required
         @input="$v.name.$touch()"
         @blur="$v.name.$touch()"
@@ -33,6 +34,7 @@
         v-model="email"
         :error-messages="emailErrors"
         label="Votre E-mail"
+        color="#e0f7fa"
         required
         @input="$v.email.$touch()"
         @blur="$v.email.$touch()"
@@ -129,13 +131,29 @@ export default {
 <style>
 .contactForm {
     width: 80%;
+    color: #e0f7fa;
+}
+
+.theme--light.v-input {
+    color: #B2EBF2 !important;
+}
+
+.v-input__slot, .v-text-field__slot, .v-label, .v-input__slot:after, .v-counter {
+  color: #B2EBF2 !important;
+}
+
+.v-input__slot:before {
+  border-color: #B2EBF2 !important;
 }
 
 .contactContainer {
-    background-color: #e3e3e3;
+  background-image: url('/bg-stones.jpg');
+
+    /* background-color: #e3e3e3;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 200 200'%3E%3Cpolygon fill='%23fafafa' fill-opacity='0.39' points='100 0 0 100 100 100 100 200 200 100 200 0'/%3E%3C/svg%3E");
     background-attachment: fixed;
-    background-repeat: initial;
+    background-repeat: initial; */
+    padding: 15vh 10vw;
 }
 
 @media only screen and (max-width: 600px) {

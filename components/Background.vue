@@ -5,7 +5,7 @@
         Dévelopeur Web Freelance.
       </h3>
       <p class="cyan--text text--lighten-5">
-        Dévelopeur depuis maintenant 7 ans, je me suis tourné vers le Web depuis 6 ans environ, en même temps que mes études. Découvrez ici une galerie de certains de mes projets perso. Vous pouvez aussi me contacter. A très vite et bonne visite.
+        Dévelopeur depuis maintenant 7 ans, je me suis tourné vers le Web depuis 5 ans environ, en même temps que mes études. Découvrez ici une galerie de certains de mes projets perso. Vous pouvez aussi me contacter. A très vite et bonne visite.
       </p>
       <v-btn
         class="myAvatar"

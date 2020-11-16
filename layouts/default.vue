@@ -6,7 +6,7 @@
       </v-toolbar-title>
       <v-spacer />
       <!-- <v-icon>mdi-dots-vertical</v-icon> -->
-      <span v-if="!isMobile" class="headerBtn" data-aos="fade-left" @click="navTo('#presentation')">Présentation</span>
+      <span v-if="!isMobile" class="headerBtn" data-aos="fade-left" @click="navTo('##')">Présentation</span>
       <span
         v-if="!isMobile"
         class="headerBtn"
@@ -34,6 +34,7 @@
     <v-btn
       v-show="fab"
       v-scroll="onScroll"
+      class="upBtn"
       fab
       dark
       fixed
@@ -43,6 +44,20 @@
       @click="toTop"
     >
       <v-icon>keyboard_arrow_up</v-icon>
+    </v-btn>
+    <v-btn
+      v-show="fab"
+      v-scroll="onScroll"
+      class="downBtn"
+      fab
+      dark
+      fixed
+      bottom
+      right
+      color="#11270B"
+      @click="toBottomOne"
+    >
+      <v-icon>keyboard_arrow_down</v-icon>
     </v-btn>
   </v-app>
 </template>
@@ -62,7 +77,9 @@ export default {
       rightDrawer: false,
       title: 'Thomas Jamais',
       isMobile: false,
-      fab: false
+      fab: false,
+      whereIm: 0,
+      part: [0, '#presentation', '#technologies', '#experiences', '#projects', '#contact']
     }
   },
   mounted () {
@@ -72,11 +89,19 @@ export default {
     onScroll (e) {
       if (typeof window === 'undefined') { return }
       const top = window.pageYOffset || e.target.scrollTop || 0
-      // console.log(top)
+      // console.log(window.pageYOffset, ', ', e.target.scrollTop)
+      // console.log((window.pageYOffset / window.screen.availHeight).toFixed(0))
+      this.whereIm = parseInt((window.pageYOffset / window.screen.availHeight).toFixed(0))
       this.fab = top > 20
     },
     toTop () {
       this.$vuetify.goTo(0)
+      this.whereIm = 0
+    },
+    toBottomOne () {
+      this.whereIm += 1
+      // console.log('GOTO => ', this.whereIm, ', ', this.part[this.whereIm])
+      this.$vuetify.goTo(this.part[this.whereIm])
     },
     navTo (to) {
       this.$vuetify.goTo(to)
@@ -86,6 +111,15 @@ export default {
 </script>
 
 <style>
+
+.downBtn {
+  bottom: 100px !important;
+}
+
+.upBtn {
+  bottom: 176px ! important
+}
+
 .headerBtn {
   margin-left: 2vw;
   cursor: pointer;

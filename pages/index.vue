@@ -6,6 +6,7 @@
     <TimeList />
     <projects />
     <ContactForm />
+    <Footer />
   </div>
   <!-- <v-row justify="center" align="center">
     <v-col cols="12" sm="8" md="6">
@@ -93,6 +94,7 @@ import languages from '~/components/Languages.vue'
 import projects from '~/components/Projects.vue'
 import ContactForm from '~/components/ContactForm.vue'
 import TimeList from '~/components/TimeList.vue'
+import Footer from '~/components/Footer.vue'
 
 export default {
   components: {
@@ -103,7 +105,8 @@ export default {
     languages,
     projects,
     ContactForm,
-    TimeList
+    TimeList,
+    Footer
   }
 }
 </script>
