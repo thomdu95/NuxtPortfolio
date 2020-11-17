@@ -39,7 +39,7 @@
         @input="$v.email.$touch()"
         @blur="$v.email.$touch()"
       />
-      <Editor :change-content="changeContent" />
+      <Editor :change-content="changeContent" :content="content" />
       <v-btn class="mr-4 mt-10" @click="submit">
         Envoyer
       </v-btn>
@@ -69,7 +69,8 @@ export default {
     email: '',
     message: '',
     error: false,
-    success: false
+    success: false,
+    content: '<h1>Tapez ici votre message.</h1>'
   }),
 
   computed: {
@@ -118,6 +119,7 @@ export default {
       this.name = ''
       this.email = ''
       this.message = ''
+      this.content = '<h1>Tapez ici votre message.</h1>'
     //   this.select = null
     //   this.checkbox = false
     },
@@ -138,7 +140,7 @@ export default {
     color: #B2EBF2 !important;
 }
 
-.v-input__slot, .v-text-field__slot, .v-label, .v-input__slot:after, .v-counter {
+.v-input__slot, .v-text-field__slot, .v-label, .v-input__slot:after, .v-counter, input {
   color: #B2EBF2 !important;
 }
 

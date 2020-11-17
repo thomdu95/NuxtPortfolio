@@ -208,4 +208,14 @@ position: absolute;
   width:100px;
 }
 
+@media only screen and (max-width: 600px) {
+  .sectionPassionContainer {
+    height: 120vh;
+  }
+
+  .passionsBigContainer {
+    flex-direction: column;
+  }
+}
+
 </style>

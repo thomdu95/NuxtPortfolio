@@ -9,21 +9,29 @@
       dark
     >
       <v-card-title class="hFooter">
-        <strong class="subheading">Si vous voulez me suivre sur Linkedin ou voir mes Git's</strong>
+        <strong class="subheading">Si vous voulez me suivre !</strong>
 
         <v-spacer />
-
-        <v-btn
+        <v-tooltip
           v-for="icon in icons"
           :key="icon"
-          class="mx-4"
-          icon
-          :href="icon.link"
+          top
         >
-          <v-icon size="24px">
-            {{ icon.icon }}
-          </v-icon>
-        </v-btn>
+          <template v-slot:activator="{ on, attrs }">
+            <v-btn
+              class="mx-4"
+              icon
+              :href="icon.link"
+              v-bind="attrs"
+              v-on="on"
+            >
+              <v-icon size="24px">
+                {{ icon.icon }}
+              </v-icon>
+            </v-btn>
+          </template>
+          <span>{{ icon.tool }}</span>
+        </v-tooltip>
       </v-card-title>
 
       <v-card-text class="py-2 text-center fFooter">
@@ -40,15 +48,23 @@ export default {
     icons: [
       {
         icon: 'mdi-github',
-        link: 'https://github.com/thomdu95'
-      },
-      {
-        icon: 'mdi-linkedin',
-        link: 'www.linkedin.com/in/thomas-jamais-0968369a'
+        link: 'https://github.com/thomdu95',
+        tool: 'Git Hub'
       },
       {
         icon: 'mdi-gitlab',
-        link: 'https://gitlab.com/thomas.jamais95'
+        link: 'https://gitlab.com/thomas.jamais95',
+        tool: 'GitLab'
+      },
+      {
+        icon: 'mdi-linkedin',
+        link: 'www.linkedin.com/in/thomas-jamais-0968369a',
+        tool: 'Linkedin'
+      },
+      {
+        icon: 'mdi-grass',
+        link: 'https://www.hamacattitude.fr',
+        tool: 'HamacAttitude'
       }
     ]
   })

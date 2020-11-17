@@ -37,6 +37,10 @@ export default {
     changeContent: {
       type: Function,
       required: true
+    },
+    content: {
+      type: String,
+      required: true
     }
   },
   data: () => ({
@@ -65,11 +69,11 @@ export default {
       HorizontalRule,
       Paragraph,
       HardBreak
-    ],
+    ]
     // starting editor's content
-    content: `
-      <h1>Tapez ici votre message.</h1>
-    `
+    // content: `
+    //   <h1>Tapez ici votre message.</h1>
+    // `
   })
 }
 </script>
