@@ -78,13 +78,29 @@ export default {
           ]
         },
         {
-          name: 'Country3',
-          img: '/siteReact.jpg',
-          link: 'http://www.country.thomas-jamais.fr/',
+          name: 'HamacAttitude',
+          img: '/siteHamac.jpg',
+          link: 'http://hamacattitude.fr/',
           star: 5,
-          shortDes: 'Trier les pays et jouer avec',
-          description: 'Projet fait en ReactJS et ReactBootstrap. C\'est un mini projet qui à pour but de démontrer certaines des mes compétences dans le dévelopement sous React. Il n\'y a pas Redux pour celui là et il est entierement fait avec des Hooks. Il est biensur à l\'état embriyonaire mais il reste décent et permet de justifier quelques compétences.\nIl a été créée en 5heures.',
-          technos: []
+          shortDes: 'Faire un ecommerce et ses propres plugins',
+          description: 'Projet fait via Shopify, VanillaJS et Liquide. Ce site est un projet qui me tient vraiment à coeur et vendant des produits de ma propre marque. Bien que ce projet soit créer via Shopify, le nombre de lignes de développement ainsi que les heures passées dessus pour le différencier des autres sites ecommerce est très grand. La grande majorité des features proviennent de mes développement personnels',
+          technos: [
+            {
+              name: 'Shopify',
+              color: '#95BF47',
+              textColor: '#FFF'
+            },
+            {
+              name: 'ES7',
+              color: '#F7DF1D',
+              textColor: '#000100'
+            },
+            {
+              name: 'Liquid',
+              color: '#3B99FD',
+              textColor: '#D7E8F8'
+            }
+          ]
         }
       ]
     }

@@ -208,6 +208,12 @@ position: absolute;
   width:100px;
 }
 
+@media only screen and (min-width: 600px) {
+  .sectionPassionContainer {
+    min-height: 500px;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .sectionPassionContainer {
     height: 120vh;

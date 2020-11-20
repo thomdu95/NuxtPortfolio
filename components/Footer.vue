@@ -14,7 +14,7 @@
         <v-spacer />
         <v-tooltip
           v-for="icon in icons"
-          :key="icon"
+          :key="icon.tool"
           top
         >
           <template v-slot:activator="{ on, attrs }">

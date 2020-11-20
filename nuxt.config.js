@@ -21,6 +21,10 @@ export default {
     ]
   },
 
+  googleAnalytics: {
+    id: 'G-G68KX6NS6G'
+  },
+
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
   ],
@@ -41,7 +45,9 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/vuetify
-    '@nuxtjs/vuetify'
+    '@nuxtjs/vuetify',
+    '@nuxtjs/google-analytics'
+
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
