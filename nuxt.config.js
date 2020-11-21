@@ -11,7 +11,8 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Thomas Jamais. Dévelopeur Web et Web Mobile Freelance, voici un eventaille de mes compétences.' }
+      { hid: 'description', name: 'description', content: 'Thomas Jamais. Dévelopeur Web et Web Mobile Freelance, voici un eventaille de mes compétences.' },
+      { name: 'keywords', content: 'thomas jamais, developeur web, freelance, react, vue' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -21,7 +22,7 @@ export default {
     ]
   },
 
-  googleAnalytics: {
+  gtm: {
     id: 'G-G68KX6NS6G'
   },
 
@@ -45,15 +46,16 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/vuetify
-    '@nuxtjs/vuetify',
-    '@nuxtjs/google-analytics'
+    '@nuxtjs/vuetify'
+    // '@nuxtjs/google-analytics'
 
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/gtm'
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
