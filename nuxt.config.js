@@ -22,10 +22,6 @@ export default {
     ]
   },
 
-  gtm: {
-    id: 'G-G68KX6NS6G'
-  },
-
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
   ],
@@ -58,6 +54,9 @@ export default {
     '@nuxtjs/gtm'
   ],
 
+  gtm: {
+    id: 'GTM-N7G7F65'
+  },
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {},
 
